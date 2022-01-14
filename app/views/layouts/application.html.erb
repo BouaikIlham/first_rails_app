@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Blog</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+
+    <%= stylesheet_link_tag "application", "data-turbo-track": "reload" %>
+    <%= javascript_importmap_tags %>
+  </head>
+
+  <body>
+
+    <div class="navbar">
+        <%= link_to "Home", home_path, class: "link" %>
+        <a class="link" href="<%= service_path %>">SERVICE</a>
+        <a class="link" href="<%= about_path %>">ABOUT</a>
+        <a class="link" href="<%= contact_path %>">CONTACT</a>
+    </div>
+    <%= yield %>
+  </body>
+</html>
